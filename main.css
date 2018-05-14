@@ -1,0 +1,68 @@
+@import url("fonts.css");
+@import url('./accordion/accordion.css');
+
+header {
+  height: 60px;
+  width: 100vw;
+  background: #2F2235;
+}
+
+h1 {
+  float: left;
+  margin: 10px 0 0 60px;
+  color: #F2F2F2;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.header--span {
+  color: #34D1D1;
+}
+
+h3 {
+  float: right;
+  margin: 20px 40px 0 0;
+  color: #F2F2F2;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.style-section {
+  padding: 40px 0 40px 0;
+}
+
+.style-section__header {
+  display: inline-block;
+  padding: 0 0 0 5%;
+  width: 12%;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.style-section__header--line {
+  display: inline-block;
+  width: 77%;
+  border: 1px solid #D1D2D3;
+  vertical-align: text-bottom;
+}
+
+.style-section__link {
+  display: block;
+  padding: 10px 0 0 0;
+  margin: 40px auto;
+  height: 40px;
+  width: 20%;
+  background-color: #3F3244;
+  box-sizing: border-box;
+  color: #D1D2D3;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.style-section__link:hover {
+  background-color: #2F2235;
+  color: #F2F2F2;
+}
+
