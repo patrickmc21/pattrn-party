@@ -1,0 +1,35 @@
+.accordion {
+  border: 1px solid coral;
+  margin: 80px auto 80px auto;
+  height: 600px;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.accordion__nav {
+  height: 60px;
+  width: 100%; 
+}
+
+.accordion__nav--btn {
+  display: inline-block;
+  border: none;
+  border-bottom: 1px solid #666666;
+  margin: -1  px;
+  height: 60px;
+  width: 25%;
+  background-color: #D1D2D3;
+  color: #666666;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.accordion__nav--btn.active {
+  border: none;
+  border-top: 1px solid #666666;
+  border-right: 1px solid #666666;
+  border-left: 1px solid #666666;
+  background-color: #FFFFFF;
+  font-weight: 600;
+}
+
