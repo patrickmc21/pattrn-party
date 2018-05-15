@@ -1,63 +1,59 @@
 .accordion {
-  position: relative;
   margin: 80px auto 80px auto;
-  height: 600px;
-  width: 80%;
+  width: 95%;
   box-sizing: border-box;
 }
 
 .accordion__btn {
-  display: inline-block;
   padding: 0;
   border: none;
   border-bottom: 1px solid #666666;
-  margin: 0;
   height: 60px;
-  width: 24.7%;
+  width: 100%;
   background-color: #D1D2D3;
   color: #666666;
   font-size: 1rem;
   font-weight: 300;
   box-sizing: border-box;
+  outline: none;
 }
 
 .accordion__btn.active {
   border: none;
-  border-top: 1px solid #666666;
-  border-right: 1px solid #666666;
-  border-left: 1px solid #666666;
+  border: 1px solid #666666;
   background-color: #FFFFFF;
   font-weight: 600;
 }
 
 .hidden {
+  height: 0px;
   visibility: hidden;
 }
 
 .accordion__article {
-  position: absolute;
-  top: 60px;
+  display: flex;
+  flex-direction: column;
   border-right: 1px solid #666666;
   border-bottom: 1px solid #666666;
   border-left: 1px solid #666666;
-  height: 540px;
+  height: 100%;
   width: 100%;
   box-sizing: border-box;
 }
 
 .accordion__article--img {
-  display: inline-block;
-  margin: 50px;
-  height: 440px;
-  width: 35%;
+  margin:  0 auto;
+  height: 200px;
+  width: 100%;
 }
 
 .accordion__article--text {
-  display: inline-block;
-  padding: 30px 20px 0 0;
-  margin: 50px 0 0 0;
-  width: 55%;
+  padding: 10px 20px 0 0;
+  margin: 0 auto;
+  height: 100%;
+  width: 90%;
   box-sizing: border-box;
+  overflow: scroll;
   vertical-align: top;
 }
 
@@ -73,6 +69,94 @@
 
 .accordion__article--text--body {
   margin-bottom: 30px;
-  font-size: 1.3rem;
-  line-height: 2rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
+
+@media screen and (min-width: 500px) {
+  .accordion {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 600px;
+    width: 80%;
+    box-sizing: border-box;
+  }
+
+  .accordion__btn {
+    display: inline-block;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid #666666;
+    height: 60px;
+    width: 25.1%;
+    background-color: #D1D2D3;
+    color: #666666;
+    font-size: 1rem;
+    font-weight: 300;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  .accordion__btn.active {
+    border: none;
+    border-top: 1px solid #666666;
+    border-right: 1px solid #666666;
+    border-left: 1px solid #666666;
+    background-color: #FFFFFF;
+    font-weight: 600;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  .accordion__article {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 60px;
+    border-right: 1px solid #666666;
+    border-bottom: 1px solid #666666;
+    border-left: 1px solid #666666;
+    height: 540px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .accordion__article--img {
+    display: inline-block;
+    margin: 50px;
+    height: 440px;
+    width: 35%;
+  }
+
+  .accordion__article--text {
+    display: inline-block;
+    padding: 30px 20px 0 0;
+    margin: 50px 0 0 0;
+    height: 90%;
+    width: 55%;
+    box-sizing: border-box;
+    overflow: scroll;
+    vertical-align: top;
+  }
+
+  .accordion__article--text--header {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .accordion__article--text--line {
+    margin: 20px 0;
+    color: #666666;
+  }
+
+  .accordion__article--text--body {
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+
+}
+
