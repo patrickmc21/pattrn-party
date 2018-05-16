@@ -5,8 +5,9 @@
 }
 
 .accordion__btn {
-  padding: 0;
+  padding: 0 5%;
   border: none;
+  margin: -1.5% 0;
   border-bottom: 1px solid #666666;
   height: 60px;
   width: 100%;
@@ -16,6 +17,13 @@
   font-weight: 300;
   box-sizing: border-box;
   outline: none;
+  text-align: left;
+}
+
+.accordion__btn::after {
+  float: right;
+  content: '+';
+  font-size: 24px;
 }
 
 .accordion__btn.active {
@@ -23,6 +31,12 @@
   border: 1px solid #666666;
   background-color: #FFFFFF;
   font-weight: 600;
+}
+
+.accordion__btn.active::after {
+  float: right;
+  content: '-';
+  font-size: 24px;
 }
 
 .hidden {
@@ -33,9 +47,8 @@
 .accordion__article {
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #666666;
-  border-bottom: 1px solid #666666;
-  border-left: 1px solid #666666;
+  justify-content: flex-start;
+  border: 1px solid #666666;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
@@ -47,6 +60,10 @@
   width: 100%;
 }
 
+.hidden .accordion__article--text {
+  height: 0%;
+}
+
 .accordion__article--text {
   padding: 10px 20px 0 0;
   margin: 0 auto;
@@ -55,6 +72,14 @@
   box-sizing: border-box;
   overflow: scroll;
   vertical-align: top;
+}
+
+.hidden .accordion__article--text {
+  height: 0px;
+}
+
+.hidden .accordion__article--img {
+  height: 0px;
 }
 
 .accordion__article--text--header {
@@ -88,6 +113,7 @@
     padding: 0;
     border: none;
     border-bottom: 1px solid #666666;
+    margin: 0;
     height: 60px;
     width: 25.1%;
     background-color: #D1D2D3;
@@ -96,6 +122,11 @@
     font-weight: 300;
     box-sizing: border-box;
     outline: none;
+    text-align: center;
+  }
+
+  .accordion__btn::after {
+    display: none;
   }
 
   .accordion__btn.active {
@@ -107,6 +138,10 @@
     font-weight: 600;
   }
 
+  .accordion__btn.active::after {
+    display: none;
+  }
+
   .hidden {
     visibility: hidden;
   }
@@ -114,8 +149,10 @@
   .accordion__article {
     position: absolute;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     top: 60px;
+    border: none;
     border-right: 1px solid #666666;
     border-bottom: 1px solid #666666;
     border-left: 1px solid #666666;
