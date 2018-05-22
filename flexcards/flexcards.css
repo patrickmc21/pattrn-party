@@ -1,0 +1,40 @@
+.flex-cards {
+  margin: auto;
+  display: grid;
+  height: 600px;
+  width: 90vw;
+}
+
+.big,
+.small {
+  display: inline-block;
+  border: 1px solid #D1D2D3;
+  margin: 5px;
+  height: 190px;
+}
+
+.big h5,
+.small h5{
+  padding: 7px;
+  margin: 0;
+  color: #000000;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.big img,
+.small img{
+  margin: 0;
+  height: 160px;
+  width: 100%;
+}
+
+.big {
+  width: 65%;
+}
+
+.small {
+  width: 32%;
+}
+
