@@ -1,40 +1,51 @@
 .flex-cards {
-  margin: auto;
+  margin: 80px auto 80px auto;
   display: grid;
-  height: 600px;
-  width: 90vw;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 300px 300px 300px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-auto-flow: row;
+  height: 900px;
+  width: 80vw;
 }
 
 .big,
 .small {
-  display: inline-block;
+  grid-row-end: span 1;
   border: 1px solid #D1D2D3;
-  margin: 5px;
-  height: 190px;
+
 }
 
 .big h5,
-.small h5{
-  padding: 7px;
+.small h5 {
+  padding: 20px;
   margin: 0;
+  height: 20%;
+  box-sizing: border-box;
   color: #000000;
   font-size: 22px;
   font-weight: 700;
+  overflow: hidden;
   text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .big img,
 .small img{
   margin: 0;
-  height: 160px;
+  height: 80%;
   width: 100%;
 }
 
 .big {
-  width: 65%;
+  grid-column-start: span 2;
+  
 }
 
 .small {
-  width: 32%;
+  grid-column-start: span 1;
+  
 }
 
