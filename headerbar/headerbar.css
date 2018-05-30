@@ -27,7 +27,7 @@
   margin: 10px;
   height: 40px;
   width: 40px;
-  background-color: transparent;
+  background-color: #F2F2F2;
   background-image: url('./images/exit.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,7 +40,9 @@
 
 .header__nav--open-btn {
   float: right;
+  border: none;
   margin: 5px;
+  background-color: transparent;
   color: #666666;
   font-family: 'Open Sans', sans-serif;
   font-size: 32px;
@@ -87,4 +89,68 @@
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
   font-weight: 300;
+}
+
+@media screen and (min-width: 600px) {
+  .header-bar {
+    margin: 80px auto; 
+    height: 120px;
+    width: 80vw;
+  }
+
+  .header {
+    height: 120px;
+  }
+
+  .header__nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .header__nav--btn-wrapper {
+    display: inline-block;
+    height: 120px;
+    width: 5%;
+  }
+
+  .header__nav--close-btn {   
+    margin: 30px 20%;
+    height: 60px;
+    width: 60px;      
+  }
+
+  .header__nav--open-btn {
+    visibility: hidden; 
+  }
+
+  .header__nav--link-wrapper.hidden {
+    visibility: visible;
+  }
+
+  .header__nav--link-wrapper {
+    position: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    top: 0px;
+    left: 10%;
+    height: 120px;
+    width: 85%;    
+    background-color: transparent;
+  }
+
+  .header__nav--link-wrapper__link {    
+    padding: 20px 0 0 0;  
+    font-size: 24px; 
+    width: 60%;   
+  } 
+
+  .header__nav--link-wrapper--search-bar {
+    display: inline-block;    
+    margin: 0;
+    height: 60px;
+    width: 80%;    
+  }
 }
