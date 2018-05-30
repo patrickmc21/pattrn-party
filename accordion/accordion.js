@@ -1,12 +1,8 @@
 $('.accordion__btn').on('click', handleClick);
 
 function handleClick() {
-  if (window.innerWidth > 500) {
-    showTab(this);
-    showTabCard(this);
-  } else {
-    toggleTab(this)
-  }
+  showTab(this);
+  showTabCard(this);
 };
 
 function showTab(ctaElement) {

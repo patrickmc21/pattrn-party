@@ -1,5 +1,7 @@
 @import url("fonts.css");
 @import url("accordion/accordion.css");
+@import url("flexcards/flexcards.css");
+@import url("headerbar/headerbar.css");
 
 header {
   height: 60px;
